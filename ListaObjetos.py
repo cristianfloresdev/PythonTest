@@ -83,22 +83,25 @@ def buscar_enemigo(nombre, enemigos):
         return None
 
 if __name__ == '__main__':
-
+    #Listamos
     enemigos = listar()
+
+    #Agregar enemigo
+    agregar_enemigo("Daron", 20, 500, enemigos)
+    print("Agregado correctamente", enemigos)
+
+    #Eliminar enemigo
+    eliminarEnemigo("Daron", enemigos)
+    print("Eliminado correctamente", enemigos)
+
+    #Modificar enemigo
+    modificarEnemigo("Oso", "Oso de cueva", 20, 200, enemigos)
+    print("Modificado correctamente", enemigos)
 
     #Mostrar enemigo o listar
     mostrar_enemigo(enemigos)
 
-    #Agregar enemigo
-    agregar_enemigo(nombre="Daron", nivel=20, vida=500,enemigos=[Objeto("Orco", 10, 100)])
-
-    #listar()
-
-    #diccionarios()
-
-
-
-    resultado = buscar_enemigo("Oso", enemigos)
+    resultado = buscar_enemigo("Dragon", enemigos)
     #Si aparece el objeto es porque existe
     print("Resultado" , resultado)
     print(type(resultado))
